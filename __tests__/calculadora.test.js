@@ -1,16 +1,21 @@
-import { somar } from "../src/calculadora.js";
+import { somar, subtrair } from "../src/calculadora.js";
 
 describe("Calculadora", () => {
-    test("Deve somar dois números corretamente", () => {
-        //AAA
-        //Arrange (Preparar)
+    test("deve somar dois números corretamente", () => {
         const a = 5;
         const b = 7;
 
-        //Act (Executar)
         const resultado = somar(a, b);
 
-        //Assert (Verificar)
         expect(resultado).toBe(12);
     });
-});
+    test("deve subtrair dois números corretamente", () => {
+        const a = 5;
+        const b = 7;
+
+        const resultado = subtrair(a, b);
+
+        expect(resultado).toBe(-2);
+    });
+})
+
